@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+header {
+  background: rgba(22, 22, 23, 0.8);
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  transition: all 0.32s cubic-bezier(0.4, 0, 0.6, 1);
+  height: 55px;
+  z-index: 2;
+}
+
+header.extended {
+  background: #161617;
+  height: 400px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+
+header {
+  /*   height: 44px; */
+}
+
+header nav {
+  flex-grow: 1;
+  margin-left: 30px;
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+#menu li {
+  display: flex;
+  align-items: center;
+}
+
+#menu a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+
+  line-height: 1;
+  display: inline-block;
+  padding: 5px;
+  transition: color 0.32s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+#menu a:hover {
+  color: white;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+#vision-pro {
+  text-align: center;
+  background-image: url(images/hero_apple_vision_pro__e8407ehady6i_large_2x.jpg);
+  background-position: center bottom;
+  background-size: auto 100%;
+  height: 570px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+#visionpro p {
+  font-size: 21px;
+  line-height: 1.19048;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  color: #6e6e73;
+  margin-top: 15px;
+}
+
+#iphone15pro {
+  background-image: url(images/hero_iphone15pro__i70z9oz3hj2i_large_2x.jpg);
+  background-position: center bottom;
+  background-size: auto 100%;
+  color: white;
+  text-align: center;
+  height: 580px;
+  padding-top: 60px;
+}
+
+section a {
+  font-size: 21px;
+  line-height: 1.381;
+  font-weight: 400;
+  color: #2997ff;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+section h2 {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+section h3 {
+  font-size: 28px;
+  line-height: 1.10722;
+  font-weight: 400;
+  letter-spacing: 0.004em;
+  margin-top: 10px;
+}
+
+#iphone15 {
+  background-image: url(images/hero_iphone15_announce__uuemlcwczn6u_large_2x.jpg);
+  background-size: auto 100%;
+  background-position: center bottom;
+  height: 580px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+#promos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+}
+.promo {
+  background-color: black;
+  text-align: center;
+  padding-top: 60px;
+  height: 580px;
+
+  background-position: center bottom;
+  background-size: auto 100%;
+  height: 580px;
+}
+
+.promo h4 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+
+.promo h5 {
+  font-size: 21px;
+  line-height: 1.2381;
+  font-weight: 400;
+  letter-spacing: 0.016em;
+  margin-top: 12px;
+}
+
+#promos h4 img {
+  width: 175px;
+}
+
+#apple-watch {
+  background-image: url(images/promo_apple_watch_unity__casvx9ysh1le_large_2x.jpg);
+  color: white;
+}
+
+#apple-watch-series-9 {
+  background-image: url(images/promo_apple_watch_series_9_order__b3u85rm9zf6u_large_2x.jpg);
+  color: white;
+}
+
+#apple-watch-ultra-2 {
+  background-image: url(images/promo_apple_watch_ultra2_order__dyxqj5ia98om_large_2x.jpg);
+}
+
+#macbook-pro {
+  background-image: url(images/promo_mbp__ek7p477bkp6q_large_2x.jpg);
+}
+
+#apple-card {
+  background-image: url(images/tile__cauwwcyyn9hy_large_2x.jpg);
+}
+
+#trade-in {
+  background-image: url(images/promo_iphone_tradein__bugw15ka691e_large_2x.jpg);
+}
+
+body {
+  position: relative;
+}
+
+body:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  backdrop-filter: blur(0px);
+  transition: all 0.32s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+body[data-overlay="true"]:after {
+  visibility: visible;
+  backdrop-filter: blur(20px);
+  z-index: 1;
+}
